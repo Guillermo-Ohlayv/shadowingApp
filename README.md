@@ -1,33 +1,44 @@
-# React + TypeScript + Vite
+# Shadowing Video App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web application designed for language learners to practice shadowing by looping specific segments of videos based on subtitles.
 
-Currently, two official plugins are available:
+## 🚀 Features (Planned)
+- Local video loading (MP4, WebM).
+- Subtitle loading and parsing (`.srt`, `.vtt`).
+- Clickable subtitle list for quick seeking.
+- Segment looping for focused shadowing practice.
+- Safe handling of videos without subtitles.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
 
-## React Compiler
+### Core
+- **React 19**: UI Library.
+- **TypeScript**: Static typing for better maintainability.
+- **Vite**: Fast build tool and development server.
+- **Tailwind CSS v4**: Utility-first styling via `@tailwindcss/vite`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Tooling & Environment
+- **pnpm**: Preferred package manager to ensure faster installations and better security/efficiency over npm.
+- **Oxlint**: Fast JavaScript/TypeScript linter.
 
-## Expanding the Oxlint configuration
+## 📦 Installation & Setup
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+Since this project uses **pnpm**, please avoid using `npm` or `yarn`.
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-# shadowingApp
+2. Start the development server:
+   ```bash
+   pnpm dev
+   ```
+
+3. Build for production:
+   ```bash
+   pnpm build
+   ```
+
+## 🗺️ Roadmap
+Detailed implementation steps can be found in [PLAN.md](PLAN.md).
